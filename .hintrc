@@ -26,7 +26,13 @@
           "animation-range",
           "animation-timeline: view(20% 80%)",
           "animation-timeline: view(50% 25%)",
-          "animation-timeline: view(55% 25%)"
+          "animation-timeline: view(55% 25%)",
+          "animation-timeline: view(35% 25%)",
+          "animation-timeline: view(10% 5%)",
+          "animation-timeline: view(50% 40%)",
+          "animation-timeline: view(60% 40%)",
+          "-wibkit-clip-path",
+          "-webkit-mask-clip"
         ]
       }
     ]
