@@ -158,11 +158,191 @@ nav ul li a:hover {
   }
 }
 
-.group:hover > div:first-child {
+/* .group:hover > div:first-child {
   filter: drop-shadow(0 0 12px currentColor);
   transform: scale(1.05);
   transition: all 0.4s ease;
   z-index: 20;
+} */
+
+.skillcirclesvg{
+        width: 520px;
+        height: 520px;
+        transform: rotateX(55deg);
+        filter: drop-shadow(0 0 5px rgba(255, 255, 255, 1.5));
+      }
+
+
+      .circlehtml {
+        fill: none;
+        stroke: #d9d9d9;
+        stroke-width: 8;
+        stroke-linecap: round;
+        transform-origin: 50% 50%;
+        transform: rotate(-115deg);
+      }
+
+      .circlehtml:hover{
+        stroke:orange;
+      }
+
+       .circlecss {
+        fill: none;
+        stroke: #d9d9d9;
+        stroke-width: 8;
+        stroke-linecap: round;
+        transform-origin: 50% 50%;
+        transform: rotate(-72deg);
+      }
+      .circlecss:hover{
+        stroke:#A000FF;
+      }
+
+      .circlejs {
+        fill: none;
+        stroke: #d9d9d9;
+        stroke-width: 8;
+        stroke-linecap: round;
+        transform-origin: 50% 50%;
+        transform: rotate(-115deg);
+      }
+
+      .circlejs:hover{
+        stroke:#87BD23;
+      }
+
+       .circlereact {
+        fill: none;
+        stroke: #d9d9d9;
+        stroke-width: 8;
+        stroke-linecap: round;
+        transform-origin: 50% 50%;
+        transform: rotate(-144deg);
+      }
+
+      .circlereact:hover{
+        stroke:#21808D;
+      }
+
+
+      .segmenthtml {
+        stroke-dasharray: 522 214; /* 130px visible, 130px hidden */
+        stroke-dashoffset: 200;
+      }
+
+      .segmentcss {
+        stroke-dasharray: 60 375; /* 50 visible, 210 hidden */
+        stroke-dashoffset: -372; /* move position further */
+      }
+
+      .segmentjs {
+        stroke-dasharray: 50 375; /* 50 visible, 210 hidden */
+        stroke-dashoffset: -372; /* move position further */
+      }
+
+      .segmentreact {
+        stroke-dasharray: 31 375; /* 50 visible, 210 hidden */
+        stroke-dashoffset: -372; /* move position further */
+      }
+
+      
+      /* Fix shaking + add percentage text system */
+
+/* keep circle transforms stable */
+.skillcirclesvg circle {
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+  transition: transform 0.5s ease, filter 0.5s ease, stroke 0.5s ease, opacity 0.5s ease;
+  pointer-events: all;
+}
+
+/* Smooth scale only, no translate */
+.circlehtml:hover {
+  transform: rotate(-115deg) scale(1.15);
+  stroke-width: 7;
+  filter: drop-shadow(0 0 2px orange);
+  stroke: orange;
+}
+.circlecss:hover {
+  transform: rotate(-72deg) scale(1.15);
+  stroke-width: 7;
+  filter: drop-shadow(0 0 2px #A000FF);
+  stroke: #A000FF;
+}
+.circlejs:hover {
+  transform: rotate(-115deg) scale(1.15);
+  stroke-width: 7;
+  filter: drop-shadow(0 0 2px #87BD23);
+  stroke: #87BD23;
+}
+.circlereact:hover {
+  transform: rotate(-144deg) scale(1.15);
+  stroke-width: 7;
+  filter: drop-shadow(0 0 2px #21808D);
+  stroke: #21808D;
+}
+
+/* Dim non-hovered circles */
+.skillcirclesvg:hover circle:not(:hover) {
+  opacity: 0.25;
+  filter: blur(1px);
+}
+
+/* Centered percentage text */
+.skillcirclesvg text {
+  font-size: 22px;
+  fill: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  text-anchor: middle;
+  dominant-baseline: middle;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+/* show text on hover */
+
+.skillcirclesvg:hover circle:hover + text {
+  /* opacity: 0; */
+  font-size: 26px;
+  transition: opacity 0.3s ease, font-size 0.3s ease;
+}
+
+/* hide all initially */
+.texthtml, .textcss, .textjs, .textreact {
+  opacity: 0;
+  transition: opacity .1s ;
+}
+
+/* show only the hovered one */
+.segmenthtml:hover ~ .texthtml { opacity: 1; }
+.segmentcss:hover ~ .textcss { opacity: 1; }
+.segmentjs:hover ~ .textjs { opacity: 1; }
+.segmentreact:hover ~ .textreact { opacity: 1; }
+
+/* Only trigger hover when mouse touches the actual stroke line */
+.skillcirclesvg circle {
+  pointer-events: stroke;
+  fill: none;
+}
+
+@media (max-width: 1024px) {
+  .skillcirclesvg{
+    width: 500px;
+    height: 500px;
+  }
+}
+@media (max-width: 720px) {
+  .skillcirclesvg{
+    width: 420px;
+    height: 420px;
+  }
+}
+
+@media (max-width: 420px) {
+  .skillcirclesvg{
+    width: 100%;
+    height: 100%;
+  }
 }
 
 /* Project section */
