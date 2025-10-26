@@ -303,7 +303,7 @@
     </section>
 
     <!-- Skill section -->
-    <section id="Skill" class="bg-black px-6 py-10 md:py-20">
+    <section id="Skill" class="bg-black px-6 py-10 md:py-20 overflow-hidden">
       <div class="mt-5 mb-10 flex gap-6 items-center justify-center">
         <h2 class="text-3xl md:text-6xl font-light text-center text-white">
           Skill
@@ -318,18 +318,27 @@
         class="flex flex-col md:flex-row items-center bg-black justify-center md:gap-12"
       >
         <!-- Left Circular Hover Section -->
-
-        <svg class="skillcirclesvg" viewBox="0 0 200 200">
-          <circle class="segmenthtml circlehtml" cx="100" cy="100" r="80" />
-          <circle class="segmentcss circlecss" cx="100" cy="100" r="80" />
-          <circle class="segmentjs circlejs" cx="100" cy="100" r="80" />
-          <circle class="segmentreact circlereact" cx="100" cy="100" r="80" />
-          <!-- Percentage text for each skill -->
-          <text x="100" y="100" class="texthtml">90%</text>
-          <text x="100" y="100" class="textcss">80%</text>
-          <text x="100" y="100" class="textjs">75%</text>
-          <text x="100" y="100" class="textreact">85%</text>
-        </svg>
+        <div>
+          <div >
+            <h3 class="px-4 py-2 bg-[#D9D9D96B] text-white inline rounded-full flex justify-center items-center">HOVER</h3>
+            <img
+                class="h-[150px] w-[150px] md:w-[250px] md:h-[250px] inline relative -rotate-45 top-5 md:top-10 left-7 md:left-15"
+                src="./assets/gif/arrow left.gif"
+                alt="hiIcon"
+            />
+          </div>
+          <svg class="skillcirclesvg" viewBox="0 0 200 200">
+            <circle class="segmenthtml circlehtml" cx="100" cy="100" r="80" />
+            <circle class="segmentcss circlecss" cx="100" cy="100" r="80" />
+            <circle class="segmentjs circlejs" cx="100" cy="100" r="80" />
+            <circle class="segmentreact circlereact" cx="100" cy="100" r="80" />
+            <!-- Percentage text for each skill -->
+            <text x="100" y="100" class="texthtml">90%</text>
+            <text x="100" y="100" class="textcss">80%</text>
+            <text x="100" y="100" class="textjs">75%</text>
+            <text x="100" y="100" class="textreact">85%</text>
+          </svg>
+        </div>
 
         <!-- Right Skills Text -->
         <div class="md:w-1/2 space-y-6 text-gray-300">

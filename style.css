@@ -489,6 +489,7 @@ nav ul li a:hover {
     flex-wrap: nowrap;
     overflow: auto;
     padding: 16px;
+    justify-content: flex-start;
   }
   .card {
     width: 60%;
@@ -505,6 +506,7 @@ nav ul li a:hover {
     flex-wrap: nowrap;
     overflow: auto;
     padding: 16px;
+    justify-content: flex-start;
   }
   .card {
     width: 60%;
