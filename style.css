@@ -539,10 +539,10 @@ nav ul li a:hover {
   animation: fadeUp 1s ease forwards;
   background: white;
   /* clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 50% 100%, 0% 75%); */
-   -webkit-clip-path: path("M 300 0 L 300 360 A 23 38 0 0 1 287 405 L 151 504 L 12 398 A 23 38 0 0 1 0 371 L 0 0 L 300 0 Z");
-clip-path: path("M 300 0 L 300 360 A 23 38 0 0 1 287 405 L 151 505 L 12 398 A 23 38 0 0 1 0 371 L 0 0 L 300 0 Z");
-height: 506px;
-width: 300px;
+  -webkit-clip-path: path("M 300 0 L 300 360 A 23 38 0 0 1 287 405 L 151 504 L 12 398 A 23 38 0 0 1 0 371 L 0 0 L 300 0 Z");
+  clip-path: path("M 300 0 L 300 360 A 23 38 0 0 1 287 405 L 151 505 L 12 398 A 23 38 0 0 1 0 371 L 0 0 L 300 0 Z");
+  height: 506px;
+  width: 300px;
   /* padding: 5px; */
 }
 

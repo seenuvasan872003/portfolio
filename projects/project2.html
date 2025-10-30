@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project 2</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <style>
+    @keyframes fadeUp {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .fade-up { animation: fadeUp 1s ease forwards; }
+
+    @keyframes zoomIn {
+      0% { transform: scale(0.9); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    .zoom-in { animation: zoomIn 1s ease forwards; }
+
+    @keyframes slideIn {
+      from { transform: translateX(50px); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+    .slide-in { animation: slideIn 1s ease forwards; }
+
+    /* --- Carousel Animation --- */
+    .slider {
+      display: flex;
+      gap: 1.5rem;
+      animation: scroll 20s linear infinite;
+      width: max-content;
+    }
+
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .slider-container {
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+    }
+
+    .slider img {
+      width: 18rem;
+      height: 12rem;
+      object-fit: cover;
+      border-radius: 1rem;
+      transition: transform 0.3s ease;
+    }
+
+    .slider img:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+<body id="project1" class="bg-black text-white min-h-screen flex flex-col items-center justify-between p-8">
+
+  <!-- Main Section -->
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
+    
+    <!-- Left Side (Image with play button) -->
+    <div class="relative zoom-in">
+      <img src="https://assets.awwwards.com/awards/element/2024/05/6643b605dfc40713609368.png" 
+           alt="Project Update" class="rounded-lg shadow-lg w-full" />
+      <button class="absolute inset-0 flex items-center justify-center">
+        <div class="bg-black text-black rounded-full p-4 hover:scale-110 transition">
+          <i class="fa-solid fa-play" style="color: #ffffff;"></i>
+        </div>
+      </button>
+    </div>
+
+    <!-- Right Side (Text) -->
+    <div class="fade-up">
+      <h1 class="text-5xl font-semibold mb-4">Project 2</h1>
+      <h2 class="text-4xl font-light mb-6">portfolio</h2>
+      <p class="text-gray-300 leading-relaxed mb-8 slide-in">
+        Lorem ipsum dolor sit amet consectetur. Vivamus tempus ut diam lorem viverra diam. 
+        Risus magna pretium viverra neque mus luctus eros. Diam lobortis consequat nunc aliquam 
+        sollicitudin pellentesque. Eu non sit volutpat vestibulum tortor in diam.
+      </p>
+    </div>
+  </div>
+
+  <!-- Carousel Section -->
+  <section class="w-full max-w-6xl mx-auto mt-8">
+    <h2 class="text-3xl font-semibold mb-6 text-center">More Projects</h2>
+
+    <div class="slider-container">
+      <div class="slider">
+        <!-- duplicate images for infinite scroll effect -->
+        <img src="https://www.wscubetech.com/blog/wp-content/uploads/2024/02/product-landing-page.webp" alt="Project 1" />
+        <img src="https://assets.awwwards.com/awards/element/2024/05/6643b605dfc40713609368.png" alt="Project 2" />
+        <img src="https://foolishdeveloper.com/wp-content/uploads/2024/05/thumbnail-11.png" alt="Project 3" />
+        <img src="https://foolishdeveloper.com/wp-content/uploads/2021/11/todo-list-javascript.jpg" alt="Project 4" />
+        <img src="https://5.imimg.com/data5/SELLER/Default/2024/3/395252673/XJ/CS/FF/98018735/ecommerce-website-design-service.jpg" alt="Project 5" />
+        <!-- repeat for smooth looping -->
+        <img src="https://www.wscubetech.com/blog/wp-content/uploads/2024/02/product-landing-page.webp" alt="Project 1" />
+        <img src="https://assets.awwwards.com/awards/element/2024/05/6643b605dfc40713609368.png" alt="Project 2" />
+        <img src="https://foolishdeveloper.com/wp-content/uploads/2024/05/thumbnail-11.png" alt="Project 3" />
+        <img src="https://foolishdeveloper.com/wp-content/uploads/2021/11/todo-list-javascript.jpg" alt="Project 4" />
+        <img src="https://5.imimg.com/data5/SELLER/Default/2024/3/395252673/XJ/CS/FF/98018735/ecommerce-website-design-service.jpg" alt="Project 5" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Back button -->
+  <a href="../index.html#project" class="absolute top-8 right-8 text-sm flex items-center gap-2 text-gray-400 hover:text-white transition">
+    ← BACK
+  </a>
+
+</body>
+</html>
